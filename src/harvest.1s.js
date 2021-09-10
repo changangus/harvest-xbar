@@ -7,14 +7,17 @@ const HARVEST_USER_ID = 3855900;
  
 const PROJECT_DICTIONARY = {
   DIRECTED_LEARNING: {
+    name: 'DIRECTED_LEARNING',
     projectId: 3073688,
     taskId: 1819355 
   },
   PAIRING: {
+    name: 'PAIRING',
     projectId: 3073697,
     taskId: 1629017
   },
   GENERAL: {
+    name: 'GENERAL',
     projectId: 3073665,
     taskId: 1819358 
   }
