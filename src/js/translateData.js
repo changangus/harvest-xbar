@@ -5,6 +5,12 @@ const getIsTimeTrackedToday = (time_entries) => {
   return spent_date === today 
 }
 
+const getTotalTrackedHoursForToday = (time_entries) => {
+  const { hours } = time_entries;
+  return getIsTimeTrackedToday(time_entries) ? hours : 0;
+}
+
 module.exports = {
-  getIsTimeTrackedToday
+  getIsTimeTrackedToday,
+  getTotalTrackedHoursForToday
 }
