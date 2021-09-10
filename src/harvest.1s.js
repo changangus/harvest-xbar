@@ -4,7 +4,6 @@ const axios = require('axios')
 const HARVEST_TOKEN = '2719680.pt.8S1Yry48sFx_5qPZ4_a650DfG2Z4-_mwykp-uQTpWTVDttVS0CWxYah1wM_-mOdLNOdUpJ9QbdZFmap1UjgI_Q'; 
 const HARVEST_ACCOUNT_ID = 266954;
 const HARVEST_USER_ID = 3855900;
-const TODAY = `${new Date()}`.slice(0,10);
  
 const PROJECT_DICTIONARY = {
   DIRECTED_LEARNING: {
