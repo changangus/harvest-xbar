@@ -11,9 +11,8 @@ const getTotalTrackedHoursForToday = (time_entries) => {
 }
 
 const translateData = (time_entries, project) => {
-  const translatedData = {};
 
-  translatedData[project.name] = {
+  const translatedData = {
     todaysDate: `${new Date()}`.slice(0,10),
     isTimeTrackedToday: getIsTimeTrackedToday(time_entries),
     isRunning: time_entries[0].is_running,
