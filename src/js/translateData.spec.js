@@ -1,5 +1,5 @@
-const { PROJECT_DICTIONARY } = require("../harvest.1s");
-const { mockDirectedLearningResponse, mockPairingResponse, mockGeneralResponse } = require("./mockData")
+const { PROJECT_DICTIONARY } = require("../constants/projectDictionaryAndOrder");
+const { mockDirectedLearningResponse, mockPairingResponse, mockGeneralResponse } = require("../data/mockData")
 const { getIsTimeTrackedToday, getTotalTrackedHoursForToday, translateData } = require("./translateData")
 
 describe('getIsTimeTracked', () => {
