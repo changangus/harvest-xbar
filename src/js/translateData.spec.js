@@ -29,40 +29,34 @@ describe('translateData', () => {
   it('returns a translated object from our directed learning response', () => {
     const { time_entries } = mockDirectedLearningResponse;
     expect(translateData(time_entries, PROJECT_DICTIONARY.DIRECTED_LEARNING)).toStrictEqual({
-      DIRECTED_LEARNING: {
         todaysDate: `${new Date()}`.slice(0,10),
         isTimeTrackedToday: false,
         isRunning: false,
         totalHoursTracked: 0,
         projectId: 3073688,
         taskId: 1819355
-      }
-    })
+      })
   })
   it('returns a translated object from our pairing response', () => {
     const { time_entries } = mockPairingResponse;
     expect(translateData(time_entries, PROJECT_DICTIONARY.PAIRING)).toStrictEqual({
-      PAIRING: {
         todaysDate: `${new Date()}`.slice(0,10),
         isTimeTrackedToday: false,
         isRunning: false,
         totalHoursTracked: 0,
         projectId: 3073697,
         taskId: 1629017
-      }
-    })
+      })
   })
   it('returns a translated object from our general response', () => {
     const { time_entries } = mockGeneralResponse;
     expect(translateData(time_entries, PROJECT_DICTIONARY.GENERAL)).toStrictEqual({
-      GENERAL: {
         todaysDate: `${new Date()}`.slice(0,10),
         isTimeTrackedToday: false,
         isRunning: false,
         totalHoursTracked: 0,
         projectId: 3073665,
         taskId: 1819358 
-      }
-    })
+      })
   })
 })

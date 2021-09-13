@@ -1,6 +1,6 @@
 #!/Users/anguswork/.nvm/versions/node/v16.8.0/bin/node
 const axios = require('axios');
-const { displayAllProjectHours } = require('./js/displayAllProjectsHours');
+const { displayAllProjectHours } = require('./js/displayHours');
 
 const PROJECT_DICTIONARY = {
   DIRECTED_LEARNING: {

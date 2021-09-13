@@ -12,7 +12,7 @@ const displayProjectHours = async (project) => {
 };
 
 const displayAllProjectHours = (projects) => {
-  for(let project of projects) displayData(project);
+  for(let project of projects) displayProjectHours(project);
 };
 
 module.exports = {
