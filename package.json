@@ -6,13 +6,14 @@
   "scripts": {
     "test": "jest",
     "test:coverage": "npm run test -- --coverage",
-    "test:watch": "npm run test -- --watch" 
+    "test:watch": "npm run test -- --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
     "jest": "^27.1.1"
   }
 }

@@ -1,6 +1,6 @@
-const HARVEST_TOKEN = '2719680.pt.8S1Yry48sFx_5qPZ4_a650DfG2Z4-_mwykp-uQTpWTVDttVS0CWxYah1wM_-mOdLNOdUpJ9QbdZFmap1UjgI_Q'; 
-const HARVEST_ACCOUNT_ID = 266954;
-const HARVEST_USER_ID = 3855900
+const HARVEST_TOKEN = process.env.HARVEST_TOKEN; 
+const HARVEST_ACCOUNT_ID = process.env.HARVEST_ACCOUNT_ID;
+const HARVEST_USER_ID = process.env.HARVEST_USER_ID;
 
 module.exports = {
   HARVEST_TOKEN,
