@@ -4,7 +4,7 @@ const { getIsTimeTrackedToday, getTotalTrackedHoursForToday, translateData } = r
 
 describe('getIsTimeTracked', () => {
   it('returns true', () => {
-    const today = `${new Date()}`.slice(0,10);
+    const today = new Date().toISOString().slice(0, 10);
     expect(getIsTimeTrackedToday([{ spent_date: today}])).toBe(true);
   })
   it('returns false', () => {
@@ -19,7 +19,7 @@ describe('getTotalTrackedHoursForTdoay', () => {
     expect(getTotalTrackedHoursForToday(time_entries)).toBe(0) 
   })
   it('returns the hours logged for today', () =>{
-    const today = `${new Date()}`.slice(0,10);
+    const today = new Date().toISOString().slice(0, 10);
     const mockTimeEntry = [{ spent_date: today, hours: 6.0 }];
     expect(getTotalTrackedHoursForToday(mockTimeEntry)).toBe(6.0);
   })
