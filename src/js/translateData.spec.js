@@ -33,8 +33,6 @@ describe('translateData', () => {
         isTimeTrackedToday: false,
         isRunning: false,
         totalHoursTracked: 0,
-        projectId: 3073688,
-        taskId: 1819355
       })
   })
   it('returns a translated object from our pairing response', () => {
@@ -44,8 +42,6 @@ describe('translateData', () => {
         isTimeTrackedToday: false,
         isRunning: false,
         totalHoursTracked: 0,
-        projectId: 3073697,
-        taskId: 1629017
       })
   })
   it('returns a translated object from our general response', () => {
@@ -55,8 +51,6 @@ describe('translateData', () => {
         isTimeTrackedToday: false,
         isRunning: false,
         totalHoursTracked: 0,
-        projectId: 3073665,
-        taskId: 1819358 
       })
   })
 })

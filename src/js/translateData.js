@@ -1,3 +1,5 @@
+const { getTimeEntries } = require('./getTimeEntries.js')
+
 const getIsTimeTrackedToday = (time_entries) => {
   const { spent_date } = time_entries[0];
   const today = new Date().toISOString().slice(0, 10);
@@ -10,22 +12,27 @@ const getTotalTrackedHoursForToday = (time_entries) => {
   return getIsTimeTrackedToday(time_entries) ? hours : 0;
 }
 
-const translateData = (time_entries, project) => {
+const translateData = (time_entries) => {
 
   const translatedData = {
     todaysDate: `${new Date()}`.slice(0,10),
     isTimeTrackedToday: getIsTimeTrackedToday(time_entries),
     isRunning: time_entries[0].is_running,
     totalHoursTracked: getTotalTrackedHoursForToday(time_entries),
-    taskId: project.taskId,
-    projectId: project.projectId 
   };
 
   return translatedData;
 }
 
+const returnTranslatedData = async (project) => {
+  const timeEntries = await getTimeEntries(project);
+  const translatedData = translateData(timeEntries);
+  return translatedData; 
+};
+
 module.exports = {
   getIsTimeTrackedToday,
   getTotalTrackedHoursForToday,
   translateData,
+  returnTranslatedData
 }
