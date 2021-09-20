@@ -1,1 +1,0 @@
-node /Users/anguswork/desktop/xbar/harvest-xbar/src/js/startDirectedLearningTimer.js

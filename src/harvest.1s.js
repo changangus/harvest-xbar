@@ -8,4 +8,3 @@ const { displayAllProjectHours } = require('./js/displayHours');
 console.log('Last Recorded Hours');
 console.log('---');
 displayAllProjectHours(ORDER);
-console.log('open | shell=/Users/anguswork/desktop/xbar/harvest-xbar/src/scripts/openDirectory.sh | terminal=true')
