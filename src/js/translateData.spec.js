@@ -1,6 +1,6 @@
 const { PROJECT_DICTIONARY } = require("../constants/projectDictionaryAndOrder");
 const { mockDirectedLearningResponse, mockPairingResponse, mockGeneralResponse } = require("../data/mockData")
-const { getIsTimeTrackedToday, getTotalTrackedHoursForToday, translateData } = require("./translateData")
+const { getIsTimeTrackedToday, getTotalTrackedHoursForToday, translateData, returnTranslatedData } = require("./translateData")
 
 describe('getIsTimeTracked', () => {
   it('returns true', () => {
@@ -29,6 +29,7 @@ describe('translateData', () => {
   it('returns a translated object from our directed learning response', () => {
     const { time_entries } = mockDirectedLearningResponse;
     expect(translateData(time_entries, PROJECT_DICTIONARY.DIRECTED_LEARNING)).toStrictEqual({
+        timeEntryId: 1591671816,
         todaysDate: `${new Date()}`.slice(0,10),
         isTimeTrackedToday: false,
         isRunning: false,
@@ -38,6 +39,7 @@ describe('translateData', () => {
   it('returns a translated object from our pairing response', () => {
     const { time_entries } = mockPairingResponse;
     expect(translateData(time_entries, PROJECT_DICTIONARY.PAIRING)).toStrictEqual({
+        timeEntryId: 1591671854,
         todaysDate: `${new Date()}`.slice(0,10),
         isTimeTrackedToday: false,
         isRunning: false,
@@ -47,6 +49,7 @@ describe('translateData', () => {
   it('returns a translated object from our general response', () => {
     const { time_entries } = mockGeneralResponse;
     expect(translateData(time_entries, PROJECT_DICTIONARY.GENERAL)).toStrictEqual({
+        timeEntryId: 1591671852,
         todaysDate: `${new Date()}`.slice(0,10),
         isTimeTrackedToday: false,
         isRunning: false,

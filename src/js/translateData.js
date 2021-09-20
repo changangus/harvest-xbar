@@ -12,19 +12,15 @@ const getTotalTrackedHoursForToday = (time_entries) => {
   return getIsTimeTrackedToday(time_entries) ? hours : 0;
 }
 
-const translateData = (time_entries) => {
-
-  const translatedData = {
+const translateData = (time_entries) => ({
+    timeEntryId: time_entries[0].id,
     todaysDate: `${new Date()}`.slice(0,10),
     isTimeTrackedToday: getIsTimeTrackedToday(time_entries),
     isRunning: time_entries[0].is_running,
     totalHoursTracked: getTotalTrackedHoursForToday(time_entries),
-  };
+})
 
-  return translatedData;
-}
-
-const returnTranslatedData = async (project) => {
+const getTranslatedData = async (project) => {
   const timeEntries = await getTimeEntries(project);
   const translatedData = translateData(timeEntries);
   return translatedData; 
@@ -34,5 +30,5 @@ module.exports = {
   getIsTimeTrackedToday,
   getTotalTrackedHoursForToday,
   translateData,
-  returnTranslatedData
+  getTranslatedData
 }
