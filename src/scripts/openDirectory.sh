@@ -1,2 +1,0 @@
-open $DIRECTORY
-echo $TODAY
