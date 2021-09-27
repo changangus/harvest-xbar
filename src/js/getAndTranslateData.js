@@ -1,4 +1,11 @@
-const { getTimeEntries } = require('./getTimeEntries.js')
+const axios = require('axios');
+const { HARVEST_HEADERS } = require('../constants/harvestInfo');
+
+const getTimeEntries = async ({ projectId }) => {
+  const { data : { time_entries }} = await axios.get(`https://api.harvestapp.com/v2/time_entries?project_id=${projectId}&per_page=1`, HARVEST_HEADERS);
+
+  return time_entries
+}
 
 const getIsTimeTrackedToday = (time_entries) => {
   const { spent_date } = time_entries[0];

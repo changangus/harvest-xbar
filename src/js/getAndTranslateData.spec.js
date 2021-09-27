@@ -1,6 +1,6 @@
 const { PROJECT_DICTIONARY } = require("../constants/projectDictionaryAndOrder");
 const { mockDirectedLearningResponse, mockPairingResponse, mockGeneralResponse } = require("../data/mockData")
-const { getIsTimeTrackedToday, getTotalTrackedHoursForToday, translateData, returnTranslatedData } = require("./translateData")
+const { getIsTimeTrackedToday, getTotalTrackedHoursForToday, translateData } = require("./getAndTranslateData")
 
 describe('getIsTimeTracked', () => {
   it('returns true', () => {

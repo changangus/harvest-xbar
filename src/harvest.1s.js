@@ -1,10 +1,9 @@
 #!/Users/anguswork/.nvm/versions/node/v16.8.0/bin/node
-
-const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+const path = require('path')
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const { ORDER } = require('./constants/projectDictionaryAndOrder');
 const { HARVEST_TOKEN, HARVEST_ACCOUNT_ID } = require('./constants/harvestInfo');
-const { getTranslatedData } = require('./js/translateData');
+const { getTranslatedData } = require('./js/getAndTranslateData');
 const shellPath = '/Users/anguswork/desktop/xbar/harvest-xbar/src/scripts/';
 
 const displayStartMenu = (project, translatedData) => {
